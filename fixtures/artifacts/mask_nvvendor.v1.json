@@ -1,0 +1,128 @@
+{
+  "artifact_type": "decoder_mask",
+  "artifact_id": "mask_nvvendor",
+  "version": 1,
+  "tenant_id": null,
+  "created_at": "2026-07-01T00:00:00Z",
+  "body": {
+    "mask_id": "mask_nvvendor",
+    "version": 1,
+    "scope": "vendor",
+    "tenant_id": null,
+    "template_ref": { "template_id": "tmpl_nvinv", "version": 1 },
+    "system_context": "erp_invoice",
+    "entries": [
+      {
+        "element_id": "el_invoice_number",
+        "semantic_role": "invoice_number",
+        "target": { "schema": "invoice_record_v1", "field": "invoice_number", "datatype": "string" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_invoice_date",
+        "semantic_role": "invoice_date",
+        "target": { "schema": "invoice_record_v1", "field": "invoice_date", "datatype": "date" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_due_date",
+        "semantic_role": "due_date",
+        "target": { "schema": "invoice_record_v1", "field": "due_date", "datatype": "date" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_currency",
+        "semantic_role": "currency",
+        "target": { "schema": "invoice_record_v1", "field": "currency", "datatype": "string" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_payment_terms",
+        "semantic_role": "payment_terms",
+        "target": { "schema": "invoice_record_v1", "field": "payment_terms", "datatype": "string" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_total_amount",
+        "semantic_role": "total_amount",
+        "target": { "schema": "invoice_record_v1", "field": "total_amount", "datatype": "number" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_vat_amount",
+        "semantic_role": "vat_amount",
+        "target": { "schema": "invoice_record_v1", "field": "vat_amount", "datatype": "number" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_approved",
+        "semantic_role": "approved",
+        "target": { "schema": "invoice_record_v1", "field": "approved", "datatype": "boolean" },
+        "enum_map": { "Yes": true, "No": false },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_notes",
+        "semantic_role": "notes",
+        "target": { "schema": "invoice_record_v1", "field": "notes", "datatype": "string" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_line_items",
+        "semantic_role": "line_items",
+        "target": { "schema": "invoice_record_v1", "field": "line_items", "datatype": "array" },
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      }
+    ]
+  }
+}

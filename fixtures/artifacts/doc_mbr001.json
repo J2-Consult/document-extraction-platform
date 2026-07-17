@@ -1,0 +1,16 @@
+{
+  "document_id": "doc_mbr001",
+  "tenant_id": "t-nordvik",
+  "source": {
+    "sha256": "62e819159d3e69bcbe1b5816ae5eb391b445f339139c6518b85f995f2a1b5437",
+    "size_bytes": 2670,
+    "media_type": "application/pdf",
+    "original_filename": "mbr_report_001.pdf"
+  },
+  "template_ref": null,
+  "content_ref": {
+    "content_id": "content_mbr001",
+    "version": 1
+  },
+  "state": "processed"
+}

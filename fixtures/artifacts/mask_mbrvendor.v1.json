@@ -1,0 +1,89 @@
+{
+  "artifact_type": "decoder_mask",
+  "artifact_id": "mask_mbrvendor",
+  "version": 1,
+  "tenant_id": null,
+  "created_at": "2026-07-01T00:00:00Z",
+  "body": {
+    "mask_id": "mask_mbrvendor",
+    "version": 1,
+    "scope": "vendor",
+    "tenant_id": null,
+    "template_ref": { "template_id": "tmpl_mbr", "version": 1 },
+    "system_context": "cmms",
+    "entries": [
+      {
+        "element_id": "el_sec_1_1",
+        "semantic_role": "general_information_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "general_information_notes", "datatype": "string" },
+        "section_path": "1.1",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_sec_5_2",
+        "semantic_role": "visual_inspection_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "visual_inspection_notes", "datatype": "string" },
+        "section_path": "5.2",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_sec_9_7",
+        "semantic_role": "torque_verification_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "torque_verification_notes", "datatype": "string" },
+        "section_path": "9.7",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_sec_13_4",
+        "semantic_role": "bearing_inspection_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "bearing_inspection_notes", "datatype": "string" },
+        "section_path": "13.4",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_sec_14_0",
+        "semantic_role": "lubrication_check_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "lubrication_check_notes", "datatype": "string" },
+        "section_path": "14.0",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      },
+      {
+        "element_id": "el_sec_16_3",
+        "semantic_role": "corrective_actions_notes",
+        "target": { "schema": "maintenance_record_v1", "field": "corrective_actions_notes", "datatype": "string" },
+        "section_path": "16.3",
+        "attribution": {
+          "origin": "vendor",
+          "inherited_from": null,
+          "overridden": false,
+          "validated_by": "vendor-consultant-1"
+        }
+      }
+    ]
+  }
+}

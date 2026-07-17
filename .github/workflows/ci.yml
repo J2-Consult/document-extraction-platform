@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  CI: "true"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: make setup VENV=.venv
+      - name: Check (ruff + mypy + unit tests)
+        run: make check VENV=.venv
+
+  db-suites:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: docext
+          POSTGRES_USER: docext
+          POSTGRES_PASSWORD: docext_dev_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U docext -d docext"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    env:
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: docext
+      POSTGRES_USER: docext
+      POSTGRES_PASSWORD: docext_dev_password
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: make setup VENV=.venv
+      - name: Integration suite
+        run: make test-integration VENV=.venv
+      - name: Acceptance suite
+        run: make test-acceptance VENV=.venv
+      - name: Isolation suite (E02 — required check for every PR)
+        run: make test-isolation VENV=.venv
+
+  pip-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: make setup VENV=.venv
+      - name: Audit installed dependencies
+        run: .venv/bin/python -m pip_audit
+
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  fixtures-determinism:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild fixture bundle
+        run: |
+          if [ -f fixtures/build_bundle.py ]; then
+            python3 fixtures/build_bundle.py
+          else
+            echo "SKIP: fixtures/build_bundle.py not present yet (fixtures bundle in progress)"
+          fi
+      - name: Assert no drift
+        run: git diff --exit-code fixtures/

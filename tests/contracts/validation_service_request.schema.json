@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://contracts.local/schemas/validation_service_request.schema.json",
+  "title": "validation_service_request",
+  "description": "PINNED wire contract for the request the preparator sends to the external Validation Service. The record is flattened to scalar paths (JSON-pointer-ish, e.g. 'line_items/0/qty'); '_bboxes' attaches the source page and bbox of each top-level target field, taken from observation provenance. Changing this file is a contract change and must be flagged in review.",
+  "type": "object",
+  "required": ["ruleset_id", "target_schema", "target_schema_version", "record", "_bboxes"],
+  "additionalProperties": false,
+  "properties": {
+    "ruleset_id": { "type": "string", "minLength": 1 },
+    "target_schema": { "type": "string", "minLength": 1 },
+    "target_schema_version": { "type": "integer", "minimum": 1 },
+    "record": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "number", "boolean"] }
+    },
+    "_bboxes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["page", "bbox"],
+        "additionalProperties": false,
+        "properties": {
+          "page": { "type": "integer", "minimum": 1 },
+          "bbox": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 4,
+            "maxItems": 4
+          }
+        }
+      }
+    }
+  }
+}

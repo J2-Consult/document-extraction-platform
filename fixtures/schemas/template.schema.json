@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fixtures.local/schemas/template.schema.json",
+  "title": "Template artifact",
+  "description": "Envelope + body contract for extraction-oriented template artifacts. No business meaning belongs here (see decoder-mask.schema.json).",
+  "type": "object",
+  "required": ["artifact_type", "artifact_id", "version", "tenant_id", "created_at", "body"],
+  "additionalProperties": false,
+  "properties": {
+    "artifact_type": { "const": "template" },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "tenant_id": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "body": { "$ref": "#/$defs/templateBody" }
+  },
+  "$defs": {
+    "bbox": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "anchor": {
+      "type": "object",
+      "required": ["label_text", "label_bbox"],
+      "additionalProperties": false,
+      "properties": {
+        "label_text": { "type": "string", "minLength": 1 },
+        "label_bbox": { "$ref": "#/$defs/bbox" }
+      }
+    },
+    "tableColumn": {
+      "type": "object",
+      "required": ["name", "datatype"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "datatype": { "type": "string", "minLength": 1 }
+      }
+    },
+    "element": {
+      "type": "object",
+      "required": ["element_id", "kind", "page", "bbox"],
+      "additionalProperties": false,
+      "properties": {
+        "element_id": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": ["label", "value_region", "table", "checkbox", "section_heading"]
+        },
+        "page": { "type": "integer", "minimum": 1 },
+        "bbox": { "$ref": "#/$defs/bbox" },
+        "anchor": { "$ref": "#/$defs/anchor" },
+        "columns": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/tableColumn" },
+          "minItems": 1
+        },
+        "optional": { "type": "boolean" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "table" } }, "required": ["kind"] },
+          "then": { "required": ["columns"] }
+        }
+      ]
+    },
+    "page": {
+      "type": "object",
+      "required": ["page", "width", "height", "unit", "rotation"],
+      "additionalProperties": false,
+      "properties": {
+        "page": { "type": "integer", "minimum": 1 },
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 },
+        "unit": { "const": "pt" },
+        "rotation": { "enum": [0, 90, 180, 270] }
+      }
+    },
+    "templateBody": {
+      "type": "object",
+      "required": [
+        "template_id",
+        "version",
+        "doc_class",
+        "fingerprint",
+        "page_count",
+        "pages",
+        "elements"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "template_id": { "type": "string", "minLength": 1 },
+        "version": { "type": "integer", "minimum": 1 },
+        "doc_class": { "type": "string", "minLength": 1 },
+        "fingerprint": { "type": "string", "pattern": "^fpv1:sha256:[0-9a-f]{64}$" },
+        "page_count": { "type": "integer", "minimum": 1 },
+        "pages": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/page" }
+        },
+        "elements": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/element" }
+        }
+      }
+    }
+  }
+}

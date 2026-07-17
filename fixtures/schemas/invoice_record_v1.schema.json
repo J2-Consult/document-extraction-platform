@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fixtures.local/schemas/invoice_record_v1.schema.json",
+  "title": "invoice_record_v1",
+  "description": "Versioned target schema for mapped invoice records produced by mask resolution + mapping.",
+  "type": "object",
+  "required": ["invoice_number", "invoice_date", "total_amount", "currency"],
+  "additionalProperties": false,
+  "properties": {
+    "invoice_number": { "type": "string", "minLength": 1 },
+    "invoice_date": { "type": "string", "format": "date" },
+    "due_date": { "type": "string", "format": "date" },
+    "total_amount": { "type": "number" },
+    "vat_amount": { "type": "number" },
+    "currency": { "type": "string", "minLength": 1 },
+    "payment_terms": { "type": "string", "minLength": 1 },
+    "payment_terms_code": { "type": "string", "minLength": 1 },
+    "approved": { "type": "boolean" },
+    "internal_note": { "type": "string" },
+    "notes": { "type": "string" },
+    "line_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description", "qty", "unit_price", "amount"],
+        "additionalProperties": false,
+        "properties": {
+          "description": { "type": "string", "minLength": 1 },
+          "qty": { "type": "number" },
+          "unit_price": { "type": "number" },
+          "amount": { "type": "number" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-docext}
+      POSTGRES_USER: ${POSTGRES_USER:-docext}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-docext_dev_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - docext_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-docext} -d ${POSTGRES_DB:-docext}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  docext_pg_data:

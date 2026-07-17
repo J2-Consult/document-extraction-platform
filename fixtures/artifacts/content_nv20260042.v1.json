@@ -1,0 +1,484 @@
+{
+  "artifact_type": "content",
+  "artifact_id": "content_nv20260042",
+  "version": 1,
+  "tenant_id": "t-nordvik",
+  "created_at": "2026-07-01T00:00:00Z",
+  "body": {
+    "content_id": "content_nv20260042",
+    "document_id": "doc_nv20260042",
+    "version": 1,
+    "template_ref": {
+      "template_id": "tmpl_nvinv",
+      "version": 1
+    },
+    "source": {
+      "sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+      "media_type": "application/pdf",
+      "page_count": 1
+    },
+    "coordinate_spaces": [
+      {
+        "id": "page-1",
+        "page": 1,
+        "width": 595,
+        "height": 842,
+        "unit": "pt"
+      }
+    ],
+    "observations": [
+      {
+        "element_id": "el_invoice_number",
+        "value": "2026-0042",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            780,
+            346,
+            792
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_invoice_date",
+        "value": "2026-01-15",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            756,
+            346,
+            768
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_due_date",
+        "value": "2026-02-14",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            732,
+            346,
+            744
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_vendor_name",
+        "value": "Nordvik Components AS",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            708,
+            346,
+            720
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_customer_name",
+        "value": "Nordvik AS",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            684,
+            346,
+            696
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_currency",
+        "value": "NOK",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            660,
+            346,
+            672
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_payment_terms",
+        "value": "Net 30 days",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            636,
+            346,
+            648
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_total_amount",
+        "value": "12500.00",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            612,
+            346,
+            624
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_vat_amount",
+        "value": "2500.00",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            588,
+            346,
+            600
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_approved",
+        "value": "Yes",
+        "state": "present",
+        "confidence": {
+          "raw": 0.99,
+          "calibrated": 0.97
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            564,
+            346,
+            576
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_notes",
+        "value": null,
+        "state": "empty",
+        "confidence": {
+          "raw": 0.93,
+          "calibrated": 0.9
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            206,
+            540,
+            346,
+            552
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "element_id": "el_line_items",
+        "value": "Description Qty Unit price Amount\nWidget A 2 100.00 200.00\nWidget B 5 120.00 600.00",
+        "state": "present",
+        "confidence": {
+          "raw": 0.98,
+          "calibrated": 0.96
+        },
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            56,
+            432,
+            500,
+            494
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "unmapped_content": [
+      {
+        "note_id": "note_footer",
+        "text": "Thank you for choosing Nordvik Components AS - visit us online!",
+        "provenance": {
+          "source": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "page": 1
+          },
+          "working": {
+            "artifact_sha256": "09ad89204507cbbf487b2bf6741bbf85755b06779b8b7f558db42b0bb7acbd14",
+            "coordinate_space": "page-1"
+          },
+          "bbox": [
+            56,
+            38,
+            360,
+            50
+          ],
+          "method": "pdf_text",
+          "component_version": "fixture-1.0.0",
+          "transform_to_source": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  }
+}

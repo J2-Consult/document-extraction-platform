@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "note": "Placeholder pilot exit-criteria targets (v0.2 SS11 preamble: 'the client must agree these before commitment'). Every entry below is a TODO until the client signs off — see each entry's own 'todo' field. requires_acceptance_pass=true means the corresponding tests/acceptance criterion (specs/SKELETON-CRITERIA.md) must PASS; numeric_targets are additional pass/fail checks against benchmarks/routing/report.json (the E04 benchmark artifact), currently used only for criterion 3.",
+  "criteria": [
+    {
+      "criterion": 1,
+      "name": "fast_path_zero_full_layout_and_vlm_calls",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 2,
+      "name": "decoy_verification_reject_routes_full_analysis",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 3,
+      "name": "benchmark_harness_rates_and_zero_false_accept",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [
+        {
+          "metric": "candidate_hit_rate",
+          "comparator": "gte",
+          "value": 0.5,
+          "source": "e04_benchmark_report",
+          "todo": "client-agreed value"
+        },
+        {
+          "metric": "false_accept_rate",
+          "comparator": "lte",
+          "value": 0.0,
+          "source": "e04_benchmark_report",
+          "todo": "client-agreed value (DoD requires 0, but the pilot corpus this is measured against is)"
+        },
+        {
+          "metric": "false_reject_rate",
+          "comparator": "lte",
+          "value": 0.5,
+          "source": "e04_benchmark_report",
+          "todo": "client-agreed value"
+        },
+        {
+          "metric": "latency_ms.p95",
+          "comparator": "lte",
+          "value": 50.0,
+          "source": "e04_benchmark_report",
+          "todo": "client-agreed value"
+        },
+        {
+          "metric": "net_cost.savings_fraction",
+          "comparator": "gte",
+          "value": 0.1,
+          "source": "e04_benchmark_report",
+          "todo": "client-agreed value"
+        }
+      ],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 4,
+      "name": "tenant_isolation_rls_enforced",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 5,
+      "name": "template_v2_lineage_and_auto_migration",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 6,
+      "name": "release_unit_atomic_activation_and_reproducibility",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 7,
+      "name": "resolution_selects_customer_mask_and_pending_review_completes",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 8,
+      "name": "confidently_blank_optional_field_state",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 9,
+      "name": "provenance_on_every_value_and_note",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 10,
+      "name": "bbox_round_trip_tolerance",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 11,
+      "name": "contract_validation_and_invariant_rejection",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 12,
+      "name": "document_values_projection_matches_artifacts",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 13,
+      "name": "orchestrator_answers_via_get_document_value_injection_inert",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 14,
+      "name": "replayed_upload_idempotent_masquerade_rejected",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 15,
+      "name": "unmasked_structural_immediate_masked_semantic_async",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    },
+    {
+      "criterion": 16,
+      "name": "scorecard_renders_pilot_exit_criteria_table",
+      "requires_acceptance_pass": true,
+      "numeric_targets": [],
+      "todo": "client-agreed value"
+    }
+  ]
+}

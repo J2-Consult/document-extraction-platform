@@ -1,0 +1,219 @@
+{
+  "artifact_type": "template",
+  "artifact_id": "tmpl_mbr",
+  "version": 1,
+  "tenant_id": null,
+  "created_at": "2026-07-01T00:00:00Z",
+  "body": {
+    "template_id": "tmpl_mbr",
+    "version": 1,
+    "doc_class": "maintenance_report",
+    "fingerprint": "fpv1:sha256:c715e8d561554000a920e3bcce23703dacd2fdd648e0205591b1b5865c1cb9d6",
+    "page_count": 2,
+    "pages": [
+      {
+        "page": 1,
+        "width": 595,
+        "height": 842,
+        "unit": "pt",
+        "rotation": 0
+      },
+      {
+        "page": 2,
+        "width": 595,
+        "height": 842,
+        "unit": "pt",
+        "rotation": 0
+      }
+    ],
+    "elements": [
+      {
+        "element_id": "el_head_1_1",
+        "kind": "section_heading",
+        "page": 1,
+        "bbox": [
+          56,
+          778,
+          300,
+          794
+        ]
+      },
+      {
+        "element_id": "el_sec_1_1",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          56,
+          736,
+          540,
+          768
+        ],
+        "anchor": {
+          "label_text": "1.1 General Information",
+          "label_bbox": [
+            56,
+            778,
+            300,
+            794
+          ]
+        }
+      },
+      {
+        "element_id": "el_head_5_2",
+        "kind": "section_heading",
+        "page": 1,
+        "bbox": [
+          56,
+          698,
+          300,
+          714
+        ]
+      },
+      {
+        "element_id": "el_sec_5_2",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          56,
+          656,
+          540,
+          688
+        ],
+        "anchor": {
+          "label_text": "5.2 Visual Inspection",
+          "label_bbox": [
+            56,
+            698,
+            300,
+            714
+          ]
+        }
+      },
+      {
+        "element_id": "el_head_9_7",
+        "kind": "section_heading",
+        "page": 1,
+        "bbox": [
+          56,
+          618,
+          300,
+          634
+        ]
+      },
+      {
+        "element_id": "el_sec_9_7",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          56,
+          576,
+          540,
+          608
+        ],
+        "anchor": {
+          "label_text": "9.7 Torque Verification",
+          "label_bbox": [
+            56,
+            618,
+            300,
+            634
+          ]
+        },
+        "notes": "Smudged in the source scan; a low-confidence fixture case."
+      },
+      {
+        "element_id": "el_head_13_4",
+        "kind": "section_heading",
+        "page": 1,
+        "bbox": [
+          56,
+          538,
+          300,
+          554
+        ]
+      },
+      {
+        "element_id": "el_sec_13_4",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          56,
+          496,
+          540,
+          528
+        ],
+        "anchor": {
+          "label_text": "13.4 Bearing Inspection",
+          "label_bbox": [
+            56,
+            538,
+            300,
+            554
+          ]
+        }
+      },
+      {
+        "element_id": "el_head_14_0",
+        "kind": "section_heading",
+        "page": 2,
+        "bbox": [
+          56,
+          778,
+          300,
+          794
+        ]
+      },
+      {
+        "element_id": "el_sec_14_0",
+        "kind": "value_region",
+        "page": 2,
+        "bbox": [
+          56,
+          736,
+          540,
+          768
+        ],
+        "anchor": {
+          "label_text": "14.0 Lubrication Check",
+          "label_bbox": [
+            56,
+            778,
+            300,
+            794
+          ]
+        }
+      },
+      {
+        "element_id": "el_head_16_3",
+        "kind": "section_heading",
+        "page": 2,
+        "bbox": [
+          56,
+          698,
+          300,
+          714
+        ]
+      },
+      {
+        "element_id": "el_sec_16_3",
+        "kind": "value_region",
+        "page": 2,
+        "bbox": [
+          56,
+          640,
+          540,
+          688
+        ],
+        "anchor": {
+          "label_text": "16.3 Corrective Actions",
+          "label_bbox": [
+            56,
+            698,
+            300,
+            714
+          ]
+        }
+      }
+    ]
+  }
+}

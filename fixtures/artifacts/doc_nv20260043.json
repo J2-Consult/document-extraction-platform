@@ -1,0 +1,19 @@
+{
+  "document_id": "doc_nv20260043",
+  "tenant_id": "t-nordvik",
+  "source": {
+    "sha256": "5e34c3f53133518cd883f7b9bc4d415e8c6cdeaa3e40166083da7712b6b61913",
+    "size_bytes": 2609,
+    "media_type": "application/pdf",
+    "original_filename": "nv_invoice_20260043.pdf"
+  },
+  "template_ref": {
+    "template_id": "tmpl_nvinv",
+    "version": 1
+  },
+  "content_ref": {
+    "content_id": "content_nv20260043",
+    "version": 1
+  },
+  "state": "processed"
+}

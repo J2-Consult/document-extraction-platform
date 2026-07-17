@@ -1,0 +1,276 @@
+{
+  "artifact_type": "template",
+  "artifact_id": "tmpl_nvinv",
+  "version": 1,
+  "tenant_id": null,
+  "created_at": "2026-07-01T00:00:00Z",
+  "body": {
+    "template_id": "tmpl_nvinv",
+    "version": 1,
+    "doc_class": "invoice",
+    "fingerprint": "fpv1:sha256:c4ef0d493b22402722768efda21d570c9bd121ec6371ed6dffc3d99e33e6aac5",
+    "page_count": 1,
+    "pages": [
+      {
+        "page": 1,
+        "width": 595,
+        "height": 842,
+        "unit": "pt",
+        "rotation": 0
+      }
+    ],
+    "elements": [
+      {
+        "element_id": "el_invoice_number",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          780,
+          346,
+          792
+        ],
+        "anchor": {
+          "label_text": "Invoice number:",
+          "label_bbox": [
+            56,
+            780,
+            196,
+            792
+          ]
+        }
+      },
+      {
+        "element_id": "el_invoice_date",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          756,
+          346,
+          768
+        ],
+        "anchor": {
+          "label_text": "Invoice date:",
+          "label_bbox": [
+            56,
+            756,
+            196,
+            768
+          ]
+        }
+      },
+      {
+        "element_id": "el_due_date",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          732,
+          346,
+          744
+        ],
+        "anchor": {
+          "label_text": "Due date:",
+          "label_bbox": [
+            56,
+            732,
+            196,
+            744
+          ]
+        }
+      },
+      {
+        "element_id": "el_vendor_name",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          708,
+          346,
+          720
+        ],
+        "anchor": {
+          "label_text": "Vendor:",
+          "label_bbox": [
+            56,
+            708,
+            196,
+            720
+          ]
+        }
+      },
+      {
+        "element_id": "el_customer_name",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          684,
+          346,
+          696
+        ],
+        "anchor": {
+          "label_text": "Customer:",
+          "label_bbox": [
+            56,
+            684,
+            196,
+            696
+          ]
+        }
+      },
+      {
+        "element_id": "el_currency",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          660,
+          346,
+          672
+        ],
+        "anchor": {
+          "label_text": "Currency:",
+          "label_bbox": [
+            56,
+            660,
+            196,
+            672
+          ]
+        }
+      },
+      {
+        "element_id": "el_payment_terms",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          636,
+          346,
+          648
+        ],
+        "anchor": {
+          "label_text": "Payment terms:",
+          "label_bbox": [
+            56,
+            636,
+            196,
+            648
+          ]
+        }
+      },
+      {
+        "element_id": "el_total_amount",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          612,
+          346,
+          624
+        ],
+        "anchor": {
+          "label_text": "Total amount:",
+          "label_bbox": [
+            56,
+            612,
+            196,
+            624
+          ]
+        }
+      },
+      {
+        "element_id": "el_vat_amount",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          588,
+          346,
+          600
+        ],
+        "anchor": {
+          "label_text": "VAT amount:",
+          "label_bbox": [
+            56,
+            588,
+            196,
+            600
+          ]
+        }
+      },
+      {
+        "element_id": "el_approved",
+        "kind": "checkbox",
+        "page": 1,
+        "bbox": [
+          206,
+          564,
+          346,
+          576
+        ],
+        "anchor": {
+          "label_text": "Approved:",
+          "label_bbox": [
+            56,
+            564,
+            196,
+            576
+          ]
+        }
+      },
+      {
+        "element_id": "el_notes",
+        "kind": "value_region",
+        "page": 1,
+        "bbox": [
+          206,
+          540,
+          346,
+          552
+        ],
+        "anchor": {
+          "label_text": "Notes:",
+          "label_bbox": [
+            56,
+            540,
+            196,
+            552
+          ]
+        },
+        "optional": true
+      },
+      {
+        "element_id": "el_line_items",
+        "kind": "table",
+        "page": 1,
+        "bbox": [
+          56,
+          432,
+          500,
+          494
+        ],
+        "columns": [
+          {
+            "name": "description",
+            "datatype": "string"
+          },
+          {
+            "name": "qty",
+            "datatype": "number"
+          },
+          {
+            "name": "unit_price",
+            "datatype": "number"
+          },
+          {
+            "name": "amount",
+            "datatype": "number"
+          }
+        ],
+        "notes": "Header row at the top of the bbox; one row per line item below it."
+      }
+    ]
+  }
+}

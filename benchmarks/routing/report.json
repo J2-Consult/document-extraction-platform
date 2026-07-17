@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-07-15T19:11:28+00:00",
+  "corpus_size": 9,
+  "candidate_hit_rate": 0.8888888888888888,
+  "false_accept_rate": 0.0,
+  "false_accept_count": 0,
+  "false_reject_rate": 0.0,
+  "false_reject_count": 0,
+  "latency_ms": {
+    "p50": 2.3157596588134766,
+    "p95": 2.912139892578125
+  },
+  "net_cost": {
+    "fast_path_total_cost_units": 14.6,
+    "full_analysis_baseline_cost_units": 18.0,
+    "savings_fraction": 0.1888888888888889
+  },
+  "items": [
+    {
+      "name": "nv_invoice_20260042",
+      "expect_fast_path": true,
+      "candidate_hit": true,
+      "routed_to": "fast_path",
+      "verification_status": "accepted",
+      "latency_ms": 3.1642913818359375
+    },
+    {
+      "name": "nv_invoice_20260043",
+      "expect_fast_path": true,
+      "candidate_hit": true,
+      "routed_to": "fast_path",
+      "verification_status": "accepted",
+      "latency_ms": 2.254009246826172
+    },
+    {
+      "name": "mbr_report_001",
+      "expect_fast_path": false,
+      "candidate_hit": false,
+      "routed_to": "full_analysis",
+      "verification_status": null,
+      "latency_ms": 1.068115234375
+    },
+    {
+      "name": "decoy_nv20260042_rot1",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.3157596588134766
+    },
+    {
+      "name": "decoy_nv20260042_rot2",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.382993698120117
+    },
+    {
+      "name": "decoy_nv20260042_rot3",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.3119449615478516
+    },
+    {
+      "name": "decoy_nv20260043_rot1",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.3450851440429688
+    },
+    {
+      "name": "decoy_nv20260043_rot2",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.5339126586914062
+    },
+    {
+      "name": "decoy_nv20260043_rot3",
+      "expect_fast_path": false,
+      "candidate_hit": true,
+      "routed_to": "full_analysis",
+      "verification_status": "rejected",
+      "latency_ms": 2.267122268676758
+    }
+  ]
+}
